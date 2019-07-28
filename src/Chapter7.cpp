@@ -154,3 +154,37 @@ int arrTotal(int arr[], int n)
 	return total;
 }
 */
+
+
+
+
+/* 
+#include <iostream>
+using namespace std;
+const int arrSize = 8;
+int sum_arr(int arr[], int n);
+int main()
+{
+ 	int cookie[arrSize] = {1,2,4,8,16,32,64,128};
+	cout << cookie << " = arrary address. "<<endl;
+	cout << sizeof(cookie) << " = size of cookie." <<endl;
+	int sum = sum_arr(cookie, arrSize);
+	cout << "Total cookie eaten: " <<sum << endl;
+	sum = sum_arr(cookie, 3);
+	cout << "First three eaten : " << sum <<endl;
+	sum = sum_arr(cookie+4,4);
+	cout << "Last four eaten: "  << sum <<endl;
+	return 0;
+}
+
+int sum_arr(int arr[],int n)
+{
+	int total = 0;
+	cout << arr  << "== arr" <<endl;
+	for(int i = 0; i < n; i++)
+	{
+		total += arr[i];
+	} 
+	return total;
+}
+*/
