@@ -188,3 +188,76 @@ int sum_arr(int arr[],int n)
 	return total;
 }
 */
+
+
+
+
+
+
+
+
+
+/* 
+#include <iostream>
+using namespace std;
+const int maxSize = 5;
+int fillArray(double* arr, int limit);
+void showArray(double* arr, int n);
+void revalue(float r, double* arr, int n);
+int main()
+{
+	double propertise[maxSize];
+	int n = fillArray(propertise, maxSize);
+	showArray(propertise,n);
+	cout << "Enter reassessment rate: ";
+	float r;
+	cin >> r;
+	revalue(r,propertise,n);
+	cout << "Done"<<endl;
+	return 0;
+}
+
+int fillArray(double* arr, int limit)
+{
+	double temp;
+	int i;
+	for(i = 0; i < limit; i++)
+	{
+		cout << "Enter value #1: ";
+		cin >> temp;
+		if(!cin)
+		{
+			cin.clear();
+			while(cin.get()!='\n')
+			{
+				continue;
+			}
+			cout << "Bad input"<<endl;
+			break;
+		}
+		else if(temp < 0)
+		{
+			break;
+		}
+		arr[i] = temp;
+	}
+	return i;
+}
+
+void showArray(double* arr, int n)
+{
+	for(int i = 0; i< n; i++)
+	{
+		cout << "Property #" << i<< ": $" << arr[i] <<endl;
+	}
+}
+
+void revalue(float r, double* arr, int n)
+{
+	for(int i = 0; i< n; i++)
+	{
+		arr[i]*= r;
+		cout << "Property #" << i<< ": $" << arr[i] <<endl;
+	}
+}
+*/
