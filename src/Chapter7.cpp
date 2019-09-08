@@ -24,7 +24,7 @@ void sample()
 /*
 #include <iostream>
 using namespace std;
-void cheers(int);
+void cheers(int);q'q
 double cube(double);
 int main()
 {
@@ -194,10 +194,7 @@ int sum_arr(int arr[],int n)
 
 
 
-
-
-
-
+/*
 #include <iostream>
 using namespace std;
 const int maxSize = 5;
@@ -259,4 +256,34 @@ void revalue(float r, double* arr, int n)
 		arr[i]*= r;
 		cout << "Property #" << i<< ": $" << arr[i] <<endl;
 	}
+}
+
+*/
+
+
+
+#include <iostream>
+const int arSize = 8;
+int sum_ar(const int* begin, const int* end);
+int main()
+{
+    int cookie[arSize] = {1,2,4,8,16,32,64,128};
+    int sum = sum_ar(cookie,cookie+arSize);
+    std::cout << "Total eaten cookie: " << sum << std::endl;
+    sum = sum_ar(cookie, cookie+3);
+    std::cout << "First Three eaten cookie: " << sum << std::endl;
+    sum = sum_ar(cookie+4,cookie+8);
+    std::cout << "Last Four eaten cookie: " << sum << std::endl;
+    return 0;
+}
+
+int sum_ar(const int* begin, const int* end)
+{
+    const int* pt;
+    int total =0;
+    for(pt = begin; pt!= end; pt++)
+    {
+        total = total + *pt;
+    }
+    return  total;
 }
