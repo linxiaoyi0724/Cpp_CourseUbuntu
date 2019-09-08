@@ -197,7 +197,7 @@ int sum_arr(int arr[],int n)
 
 
 
-/* 
+
 #include <iostream>
 using namespace std;
 const int maxSize = 5;
@@ -260,4 +260,3 @@ void revalue(float r, double* arr, int n)
 		cout << "Property #" << i<< ": $" << arr[i] <<endl;
 	}
 }
-*/
