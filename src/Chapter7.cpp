@@ -262,6 +262,10 @@ void revalue(float r, double* arr, int n)
 
 
 
+
+
+
+/*
 #include <iostream>
 const int arSize = 8;
 int sum_ar(const int* begin, const int* end);
@@ -287,3 +291,6 @@ int sum_ar(const int* begin, const int* end)
     }
     return  total;
 }
+*/
+
+
