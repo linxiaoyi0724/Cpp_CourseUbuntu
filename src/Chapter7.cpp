@@ -294,3 +294,73 @@ int sum_ar(const int* begin, const int* end)
 */
 
 
+
+
+
+
+/*
+#include <iostream>
+int c_in_str(const char* str, char ch);
+int main()
+{
+	char minimum[15] = "minimum";
+	char* ululate = "ululate";
+	int ms = c_in_str(minimum,'m');
+	int us = c_in_str(ululate, 'u');
+	std::cout << ms << " m characters in minimum"<<std::endl;
+	std::cout << us << " u characters in ululate" << std::endl;
+	return 0;
+}
+
+int c_in_str(const char* str, char ch)
+{
+	int count = 0;
+	while(*str)
+	{
+		if(*str == ch)
+		{
+			count ++;
+		}
+		str++;
+	}
+	return count;
+}
+*/
+
+
+
+
+/*
+#include <iostream>
+char* buildStr(char ch, int times);
+int main()
+{
+    char ch;
+    int times;
+    std::cout << "Enter a characters: ";
+    std::cin >> ch;
+    std::cout << "Enter a integer: ";
+    std::cin >> times;
+
+    char* ch1 = buildStr(ch, times);
+    std::cout << ch1 << std::endl;
+    delete[] ch1;
+
+    char* ch2 = buildStr('+', 20);
+    std::cout << ch2 << "-DONE-" << ch2 << std::endl;
+    delete[](ch2);
+
+    return 0;
+}
+
+char* buildStr(char ch, int n)
+{
+    char * pStr = new char[n+1];
+    pStr[n] = '\0';
+    while (n-- > 0)
+    {
+        pStr[n] = ch;
+    }
+    return  pStr;
+}
+*/
