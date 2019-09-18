@@ -413,6 +413,9 @@ void showTime(travelTime timeTotal)
 
 
 
+
+
+/*
 #include <iostream>
 #include <cmath>
 const double  RadToDeg = 57.29577951;
@@ -455,6 +458,60 @@ void showPolar(polar pol)
 {
     std::cout<< "distance = " << pol.dis << ", angle = " << pol.deg << " degrees"<<std::endl;
 }
+*/
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <cmath>
+const double RadToDegree = 57.29577951;
+struct  Rect
+{
+	double x;
+	double y;
+};
+
+struct Polar
+{
+	double dis;
+	double dge;
+};
+
+void rectToPolar(const Rect* rec, Polar* pol);
+void showPolar(const Polar* pol);
+
+int main()
+{
+	Rect rec;
+	Polar pol;
+	std::cout<<"Enter the x and y values:";
+	while(std::cin>>rec.x>>rec.y)
+	{
+		std::cout <<"xiaoyi";
+		rectToPolar(&rec, &pol);
+		showPolar(&pol);
+		std::cout<<"Next two numbers (q to quit):";
+	}
+	return 0;
+}
+
+void rectToPolar(const Rect* rec, Polar* pol)
+{
+	pol->dis = sqrt(rec->x * rec->x + rec->y * rec->y);
+	pol->dge = atan2(rec->y, rec->x) * RadToDegree;
+}
+
+void showPolar(const Polar* pol)
+{
+	std::cout << "distance = "<<pol->dis <<" ,angle = " << pol->dge << std::endl;
+}
+
+
 
 
 
