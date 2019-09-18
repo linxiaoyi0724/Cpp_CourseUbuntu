@@ -364,3 +364,115 @@ char* buildStr(char ch, int n)
     return  pStr;
 }
 */
+
+
+
+
+
+/*
+#include <iostream>
+struct travelTime{
+    int hour;
+    int minute;
+};
+const int minToHr = 60;
+
+travelTime timeSum(travelTime day1, travelTime day2);
+void showTime(travelTime totalTime);
+
+int main()
+{
+    travelTime day1 = {5, 45};
+    travelTime day2 = {4,55};
+    travelTime twoDayTotal = timeSum(day1, day2);
+    std::cout << "Two-day total: ";
+    showTime(twoDayTotal);
+
+    travelTime day3 = {4, 32};
+    travelTime threeDayTotal = timeSum(day3, twoDayTotal);
+    std::cout << "Three-day total: ";
+    showTime(threeDayTotal);
+    return 0;
+}
+
+travelTime timeSum(travelTime day1, travelTime day2)
+{
+    travelTime timeTotal;
+    timeTotal.minute = (day1.minute + day2.minute) % minToHr;
+    timeTotal.hour = (day1.hour + day2.hour) + (day1.minute + day2.minute) / minToHr;
+    return  timeTotal;
+}
+
+void showTime(travelTime timeTotal)
+{
+    std::cout << timeTotal.hour << " hours, " << timeTotal.minute << " minutes"<<std::endl;
+}
+*/
+
+
+
+
+
+#include <iostream>
+#include <cmath>
+const double  RadToDeg = 57.29577951;
+struct rect{
+    double x;
+    double y;
+};
+
+struct polar{
+    double dis;
+    double deg;
+};
+
+polar recToPolar(rect rec);
+void showPolar(polar pol);
+
+int main()
+{
+    rect rec;
+    polar pol;
+    std::cout << "Enter the x and y values: ";
+    while(std::cin >> rec.x >> rec.y)
+    {
+        pol = recToPolar(rec);
+        showPolar(pol);
+        std::cout << "Next two numbers (q to quit): ";
+    }
+    return 0;
+}
+
+polar recToPolar(rect rec)
+{
+    polar pol;
+    pol.dis = sqrt(rec.x * rec.x + rec.y*rec.y);
+    pol.deg = atan2(rec.y, rec.x) * RadToDeg;
+    return  pol;
+}
+
+void showPolar(polar pol)
+{
+    std::cout<< "distance = " << pol.dis << ", angle = " << pol.deg << " degrees"<<std::endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
