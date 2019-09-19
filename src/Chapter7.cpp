@@ -466,50 +466,86 @@ void showPolar(polar pol)
 
 
 
-
+/*
 #include <iostream>
 #include <cmath>
-const double RadToDegree = 57.29577951;
-struct  Rect
+const double RadToDeg = 57.29577951;
+struct Rect
 {
-	double x;
-	double y;
+    double x;
+    double y;
 };
-
 struct Polar
 {
-	double dis;
-	double dge;
+    double distance;
+    double degree;
 };
 
-void rectToPolar(const Rect* rec, Polar* pol);
+void rectToPolar(const Rect* rect, Polar* pol);
 void showPolar(const Polar* pol);
 
 int main()
 {
-	Rect rec;
-	Polar pol;
-	std::cout<<"Enter the x and y values:";
-	while(std::cin>>rec.x>>rec.y)
-	{
-		std::cout <<"xiaoyi";
-		rectToPolar(&rec, &pol);
-		showPolar(&pol);
-		std::cout<<"Next two numbers (q to quit):";
-	}
-	return 0;
+    Rect rect;
+    Polar pol;
+    std::cout << "Enter the x and y values: ";
+    while (std::cin>>rect.x>>rect.y)
+    {
+        rectToPolar(&rect, &pol);
+        showPolar(&pol);
+        std::cout << "Next two numbers (q to quit): ";
+    }
+    std::cout<<std::endl<<"Done"<<std::endl;
 }
 
-void rectToPolar(const Rect* rec, Polar* pol)
+void rectToPolar(const Rect* rect, Polar* pol)
 {
-	pol->dis = sqrt(rec->x * rec->x + rec->y * rec->y);
-	pol->dge = atan2(rec->y, rec->x) * RadToDegree;
+    pol->distance = sqrt(rect->x * rect->x + rect->y * rect->y);
+    pol->degree = atan2(rect->y, rect->x) * RadToDeg;
 }
 
 void showPolar(const Polar* pol)
 {
-	std::cout << "distance = "<<pol->dis <<" ,angle = " << pol->dge << std::endl;
+    std::cout << "distance = " << pol->distance << ", angle = " << pol->degree << " degrees"<<std::endl;
 }
+*/
+
+
+
+
+
+
+
+
+/*
+#include <iostream>
+#include <string>
+const int Size = 5;
+void displayList(const std::string List[], const int Size);
+int main()
+{
+    std::string  list[Size];
+    std::cout << "Enter your " << Size << " favorite astronomical sights: " << std::endl;
+    for(int i = 0; i < Size; i++)
+    {
+        std::cout << i+1 << ":";
+        std::getline(std::cin, list[i]);
+
+    }
+    displayList(list, Size);
+    return  0;
+}
+void displayList(const std::string List[], const int Size)
+{
+    for(int i = 0; i < Size; i++)
+    {
+        std::cout << i+1 << ": " << List[i] <<std::endl;
+    }
+}
+ */
+
+
+
 
 
 
