@@ -549,6 +549,25 @@ void displayList(const std::string List[], const int Size)
 
 
 
+#include <iostream>
+void countDown(int n);
+int main()
+{
+	int n = 4;
+	countDown(n);
+	return 0;
+}
+void countDown(int n)
+{
+	std::cout <<"Counting down ... " << n <<std::endl;
+	if(n>0)
+	{
+		countDown(n-1);
+	}
+	std::cout << n << ": Kaboom!"<<std::endl;
+}
+
+
 
 
 
