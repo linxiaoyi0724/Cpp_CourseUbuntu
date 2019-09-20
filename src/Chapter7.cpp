@@ -549,6 +549,9 @@ void displayList(const std::string List[], const int Size)
 
 
 
+
+
+/*
 #include <iostream>
 void countDown(int n);
 int main()
@@ -566,6 +569,100 @@ void countDown(int n)
 	}
 	std::cout << n << ": Kaboom!"<<std::endl;
 }
+*/
+
+
+
+
+
+#include <iostream>
+const int dLevel = 6;
+const int len = 66;
+void subDevide(char ruler[], int min ,int max, int level);
+int main()
+{
+    char ruler[len];
+    int min = 0;
+    int max = len-2;
+    for(int i = 1; i < len-2; i++)
+    {
+        ruler[i] = ' ';
+    }
+    ruler[min] = '|';
+    ruler[max] = '|';
+    ruler[len-1] = '\0';
+    std::cout << ruler <<std::endl;
+    for(int j = 1; j <=dLevel; j ++)
+    {
+        subDevide(ruler,min, max, j);
+        std::cout << ruler << std::endl;
+        for(int m = 1; m < max;m++)
+        {
+            ruler[m] = ' ';
+        }
+
+    }
+    return 0;
+}
+
+void subDevide(char ruler[], int min, int max, int level)
+{
+    if(level == 0)
+        return;
+
+    int mid = (min + max) /2;
+    ruler[mid] = '|';
+    subDevide(ruler, min, mid,level-1);
+    subDevide(ruler,mid, max,level-1);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
