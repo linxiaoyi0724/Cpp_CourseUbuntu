@@ -633,6 +633,37 @@ void subDivide(char sA[], int min, int max, int level)
 
 
 
+#include <iostream>
+double betsy(int line);
+double pam(int line);
+void estimate(int line, double (*pf)(int));
+int main()
+{
+	int line;
+	std::cout << "How many lines of code do you need?";
+	std::cin >> line;
+	std::cout << "Here's Betsy' estimate:"<<std::endl;
+	estimate(line,betsy);
+	std::cout << "Here's Pam's estimate:"<<std::endl;
+	estimate(line, pam);
+	return 0;
+}
+
+double betsy(int line)
+{
+	return 0.05 * line;
+}
+
+double pam(int line)
+{
+	return 0.03 * line + 0.0004 * line * line;
+}
+
+void estimate(int line, double (*pf)(int))
+{
+	std::cout << line << " lines will take " << (*pf)(line) << " hour(s)" << std::endl;
+}
+
 
 
 
