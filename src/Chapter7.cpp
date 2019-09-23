@@ -575,47 +575,67 @@ void countDown(int n)
 
 
 
+
+
+/*
 #include <iostream>
 const int dLevel = 6;
 const int len = 66;
-void subDevide(char ruler[], int min ,int max, int level);
+void subDivide(char sa[], int left, int right, int level);
 int main()
 {
-    char ruler[len];
+    char sA[len];
+    for(int i = 1; i < len-2;i++)
+    {
+        sA[i] = ' ';
+    }
+
     int min = 0;
     int max = len-2;
-    for(int i = 1; i < len-2; i++)
-    {
-        ruler[i] = ' ';
-    }
-    ruler[min] = '|';
-    ruler[max] = '|';
-    ruler[len-1] = '\0';
-    std::cout << ruler <<std::endl;
-    for(int j = 1; j <=dLevel; j ++)
-    {
-        subDevide(ruler,min, max, j);
-        std::cout << ruler << std::endl;
-        for(int m = 1; m < max;m++)
-        {
-            ruler[m] = ' ';
-        }
+    sA[len-1] = '\0';
 
+    sA[min] = '|';
+    sA[max] = '|';
+
+    std::cout << sA << std::endl;
+
+    for(int j = 1; j <= dLevel; j++)
+    {
+        subDivide(sA, min ,max, j);
+        std::cout << sA << std::endl;
+
+        for(int m = 1; m < max; m++)
+        {
+            sA[m] = ' ';
+        }
     }
+
     return 0;
+
 }
 
-void subDevide(char ruler[], int min, int max, int level)
+void subDivide(char sA[], int min, int max, int level)
 {
     if(level == 0)
+    {
         return;
-
-    int mid = (min + max) /2;
-    ruler[mid] = '|';
-    subDevide(ruler, min, mid,level-1);
-    subDevide(ruler,mid, max,level-1);
-
+    }
+    int mid = (min + max) / 2;
+    sA[mid] = '|';
+    subDivide(sA, min ,mid, level-1);
+    subDivide(sA, mid ,max, level-1);
 }
+*/
+
+
+
+
+
+
+
+
+
+
 
 
 
