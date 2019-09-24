@@ -632,7 +632,7 @@ void subDivide(char sA[], int min, int max, int level)
 
 
 
-
+/*
 #include <iostream>
 double betsy(int line);
 double pam(int line);
@@ -663,12 +663,90 @@ void estimate(int line, double (*pf)(int))
 {
 	std::cout << line << " lines will take " << (*pf)(line) << " hour(s)" << std::endl;
 }
+*/
 
 
 
 
 
+1. 声明函数， 调用函数， 实现函数
+2. a. void igor();
+   b. float tofu(int);
+   c. double mpg(double, double);
+   d. long summation(long a[], int len);
+   e. double doctor(const char* ch);
+   f. void ofcourse(boss b);
+   g. string plot(map* m);
 
+3.
+void func(int a[], int len, int a)
+{
+    for(int i = 0; i < len; i++)
+    {
+        a[i] = a;
+    }
+}
+
+4.
+void func(const int* begin, const int* end, int value)
+{
+    int* a;
+    for(a = begin; a != end; a++)
+    {
+        *a = value;
+    }
+}
+
+5.
+double getMaxValue(double a[], int len)
+{
+    double temp = a[0];
+    for(int i = 1; i < len; i++)
+    {
+        if(a[i] >= temp)
+        {
+            temp = a[i];
+        }
+    }
+}
+
+6. const 限定符用于指针，以防止指向的原始数据被修改，程序传递的基本类型，它将按值传递
+
+7. char* ch 指针类型字符串
+   char ch[] 字符数组
+   string str 字符串类型
+
+
+8.
+int replace (char* str, char c1, char c2)
+{
+    int count = 0;
+    while(*str)
+    {
+        if(*str == c1)
+        {
+            *str = c2;
+            count++;
+        }
+        str++;
+    }
+    return  count;
+}
+
+
+9.
+*"pizza"的含义表示: "pizza" 字符串的第一个地址
+"taco[2]" 表示 'c'
+
+
+10.
+void (glitz g)  // 按值传递
+void (glitz* g) // 按地址传递
+
+按值传递需要把实参拷贝给形参，加大计算量和内存使用
+
+11.
+int judge(int (*pf)(const char* ch));
 
 
 
