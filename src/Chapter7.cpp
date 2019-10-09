@@ -669,6 +669,8 @@ void estimate(int line, double (*pf)(int))
 
 
 
+
+/*
 1. 声明函数， 调用函数， 实现函数
 2. a. void igor();
    b. float tofu(int);
@@ -747,6 +749,9 @@ void (glitz* g) // 按地址传递
 
 11.
 int judge(int (*pf)(const char* ch));
+
+*/
+
 
 
 
