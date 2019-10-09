@@ -24,3 +24,36 @@ int main()
 
 
 
+
+/*
+#include <iostream>
+int main()
+{
+    int rats = 101;
+    int& rodents = rats;
+    std::cout << "rats = " << rats << ", rodents = " << rodents << std::endl;
+    rodents++;
+    std::cout << "rats = " << rats << ", rodents = " << rodents << std::endl;
+    std::cout << "rats address = " << &rats << ", rodents = " << &rodents<<std::endl;
+    return 0;
+}
+*/
+
+
+
+
+#include <iostream>
+int main()
+{
+    int rats = 101;
+    int& rodents = rats;
+    std::cout<<"rats = " << rats << ", rodents = " << rodents << std::endl;
+    std::cout<<"rats address = " << &rats << ", rodents address = " << &rodents << std::endl;
+
+    int bussies = 50;
+    rodents =  bussies;
+    std::cout << "bussies = " << bussies << ", rats = " << rats << ", rodents = " << rodents <<std::endl;
+    std::cout << "bussies address = " << &bussies << " , rats address is " << &rats << ", rodents address is " << &rodents<<std::endl;
+    return 0;
+}
+
