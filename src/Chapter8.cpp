@@ -24,7 +24,6 @@ int main()
 
 
 
-
 /*
 #include <iostream>
 int main()
@@ -118,6 +117,7 @@ void swapByPoint(int* x, int* y)
 
 
 
+/*
 #include <iostream>
 double cube(double x);
 double rfCube(double& a);
@@ -140,3 +140,44 @@ double rfCube(double& a)
     a *= a * a;
     return a;
 }
+ */
+
+
+
+
+/*
+#include <iostream>
+struct snap
+{
+    char name[26];
+    char quote[64];
+    int used;
+};
+
+const snap& use(snap& sysopref);
+
+int main()
+{
+    snap looper = {"Rick \"Fortran\" Looper",
+                   "I'm a goto kind of guy.",
+                   0};
+
+    use(looper);
+    std::cout <<" Looper: " << looper.used << " use(s)\n";
+    snap copycat;
+    copycat = use(looper);
+    std::cout << "Looper: " << looper.used << " use(s)\n";
+    std::cout << "Copycat: " << copycat.used << "use(s)\n";
+    std::cout <<"use(looper): " << use(looper).used << " use(s)\n";
+    return 0;
+}
+
+const snap& use(snap& sysopref)
+{
+    std::cout << sysopref.name << " says:\n";
+    std::cout << sysopref.quote << std::endl;
+    sysopref.used++;
+    return  sysopref;
+}
+*/
+
