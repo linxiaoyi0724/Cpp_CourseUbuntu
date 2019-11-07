@@ -237,7 +237,75 @@ std::string& version2(const std::string& s1, const std::string& s2)
     temp = s2 + s1 +s2;
     return temp;
 }
+
 */
+
+
+
+
+
+
+
+
+/*
+#include <iostream>
+#include <cstdlib>
+#include <fstream>
+
+const int NLIMIT = 5;
+
+void file_it(std::ostream& os, double fo, double eye[], const int n);
+
+int main()
+{
+    std::ofstream fout;
+    const char* fn = "exp-data.txt";
+    fout.open(fn);
+    if(!fout.is_open())
+    {
+        std::cout <<" Can't open the txt." << std::endl << "Bye!" <<std::endl;
+        std::exit(EXIT_FAILURE); 
+    }
+
+    double fo;
+    std::cout << "Enter the focal length of your telescope objective in mm: ";
+    std::cin >> fo;
+
+    double eye[NLIMIT];
+    std::cout << "Enter the focal lengths, in mm, of 5 eyepieces:" << std::endl;
+    for(int i = 0; i < NLIMIT; i++)
+    {
+        std::cout << "Eyepiece #"<<i+1<<": ";
+        std::cin >> eye[i];
+    }
+    file_it(fout, fo, eye, NLIMIT);
+    file_it(std::cout, fo, eye, NLIMIT);
+    std::cout << " Done! " <<std::endl;
+}
+
+void file_it(std::ostream& os, double fo, double eye[], const int n)
+{
+    std::ios_base::fmtflags initial;
+    initial = os.setf(std::ios_base::fixed);
+    os.precision(0);
+    os << "Focal length of objective: " << fo << " mm" << std::endl;
+    os.width(12);
+    os << "f eyepiece";
+    os.width(15);
+    os << "magnification\n";
+    for(int i = 0; i < n; i++)
+    {
+        os.width(12);
+        os<<eye[i];
+        os.width(15);
+        os<<int(fo / eye[i] + 0.5) << std::endl;
+    }
+    os.setf(initial);
+    
+}
+*/
+
+
 
 
 
