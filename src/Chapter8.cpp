@@ -310,5 +310,98 @@ void file_it(std::ostream& os, double fo, double eye[], const int n)
 
 
 
+/*
+#include <iostream>
+const int arrSize = 80;
+char* left(const char arr[], int n = 1);
+int main()
+{
+    char arr[arrSize];
+    std::cout << "Enter a string: ";
+    std::cin.get(arr,arrSize);
+    char* p = left(arr,4);
+    std::cout << p << std::endl;
+    delete []p;
+    p = left(arr);
+    std::cout << p << std::endl;
+    delete []p;
+    return 0;
+}
+
+char* left(const char arr[], int n)
+{
+    char* p = new char[n+1];
+    int i;
+    for(i = 0; i < n; i++)
+    {
+        p[i] = arr[i];
+    }
+    while(i < n)
+    {
+        p[i++] = '\0';
+    }
+    return p;
+}
+*/
+
+
+
+
+
+/*
+#include <iostream>
+#include <cstring>
+const int arSize = 80;
+char* left(const char arr[], int n = 1);
+unsigned long left(unsigned long number, unsigned n);
+int main()
+{
+    char arr[arSize] = "Hawaii!!";
+    unsigned long number = 12345678;
+    int i;
+    for(i = 1; i <=8; i++)
+    {
+         std::cout << left(number,i)<<std::endl;
+         std::cout << left(arr,i) << std::endl;
+    }
+    return 0;
+}
+
+char* left(const char arr[], int n)
+{
+    int len = strlen(arr);
+    int num = (len > n) ? len : n;
+    char* p = new char(num);
+    int i ;
+    for(i = 0; i < n && arr[i]; i++)
+    {
+        p[i] = arr[i];
+    }
+    while(i < n )
+    {
+        p[i++] = '\n';
+    }
+    return p;
+}
+
+unsigned long left(unsigned long number, unsigned n)
+{
+    int n1 = number;
+    int len = 0;
+    while (n1!=0)
+    {
+        n1 = n1 /10;
+        len++;
+    }
+    int newN = len - n;
+    for(int i = newN; i >0; i--)
+    {
+        number = number / 10;
+    }
+    return number;
+}
+*/
+
+
 
 
