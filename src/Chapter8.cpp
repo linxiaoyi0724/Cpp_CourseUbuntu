@@ -405,3 +405,126 @@ unsigned long left(unsigned long number, unsigned n)
 
 
 
+
+/*
+#include <iostream>
+template <typename T>
+void swap(T& a, T& b);
+int main()
+{
+    int i = 10, j = 20;
+    std::cout << "Using compiler-generated int swapper:" <<std::endl;
+    swap(i,j);
+    std::cout << "i, j = " << i << ", " << j << std::endl;
+
+    double x = 24.5, y = 81.7;
+    std::cout << "Using compiler-generated double swapper: " << std::endl;
+    swap(x,y);
+    std::cout << "x, y = " << x << ", " << y << std::endl;
+    return 0;
+}
+
+template <typename T>
+void swap(T& a, T& b)
+{
+    T temp =0;
+    temp = a;
+    a = b;
+    b = temp;
+}
+*/
+
+
+
+
+
+
+
+
+/*
+#include <iostream>
+template <typename T>
+void swap(T& a, T& b);
+
+template <typename T>
+void swap(T* a, T* b, int n);
+
+template <typename T>
+void show(T* arr, int n);
+
+const int NUM = 8;
+
+int main()
+{
+    int i = 10, j = 20;
+    std::cout << "i, j = "<<i <<", " << j << std::endl;
+    std::cout << "Using complier-generated int swapper: " << std::endl;
+    swap(i, j);
+    std::cout << "Now i, j = "<<i <<", " << j << std::endl;
+
+
+    int d1[NUM] = {0, 7, 2, 0, 1, 9, 6, 9};
+    int d2[NUM] = {0, 7, 0, 4, 1, 9, 7, 9};
+
+    std::cout << "Original arrays: "<<std::endl;
+    show(d1, NUM);
+    show(d2, NUM);
+
+    std::cout << "Swapped arrays:" << std::endl;
+    swap(d1, d2, NUM);
+    show(d1, NUM);
+    show(d2, NUM);
+    
+    return 0;
+}
+
+
+template <typename T>
+void swap(T& a, T& b)
+{
+    T temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
+
+
+template <typename T>
+void swap(T* arr1, T* arr2, int n)
+{
+    T temp;
+    for(int i = 0; i <n; i++)
+    {
+        temp = arr1[i];
+        arr1[i]  = arr2[i];
+        arr2[i] = temp;
+    }
+}
+
+
+template <typename T>
+void show(T* arr, int n)
+{
+    std::cout << arr[0] << arr[1] << "/";
+    std::cout << arr[2] << arr[3] << "/";
+    for(int i =4; i < n; i++)
+    {
+        std::cout << arr[i];
+    }
+    std::cout << std::endl;
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
