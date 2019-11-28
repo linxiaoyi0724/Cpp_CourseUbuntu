@@ -520,6 +520,205 @@ void show(T* arr, int n)
 
 
 
+/*
+#include <iostream>
+struct Job
+{
+    char name[40];
+    double money;
+    int floor;
+};
+
+template <typename T>
+void swap(T& a, T& b);
+
+template <> void swap<Job> (Job& j1, Job& j2);
+
+void show(Job& j);
+
+int main()
+{
+    std::cout.precision(2);
+    std::cout.setf(std::ios::fixed, std::ios::floatfield);
+    int i = 10, j =20;
+    std::cout << "i , j = " << i << ", " << j << "."<<std::endl;
+    std::cout << "Using compiler-generated int swapper:" << std::endl;
+    swap(i,j);
+    std::cout << "Now i , j = " << i << ", " << j << ". "<< std::endl;
+
+    std::cout << "Before job swapping: "<<std::endl;
+    Job j1 = {"Susan Yaffee", 73000.60, 7};
+    Job j2 = {"Sidney Taffee", 78060.72, 9};
+
+    show(j1);
+    show(j2);
+
+    swap(j1, j2);
+    std::cout << "After job swapping:" <<std::endl;
+    show(j1);
+    show(j2);
+
+    return 0;
+}
+
+template <typename T>
+void swap(T& a, T& b)
+{
+    T temp;
+    temp  = a;
+    a = b;
+    b = temp;
+}
+
+
+template<> void swap<Job> (Job& j1, Job& j2)
+{
+    double tempM;
+    int tempF;
+
+    tempM = j1.money;
+    j1.money = j2.money;
+    j2.money = tempM;
+
+    tempF = j1.floor;
+    j1.floor = j2.floor;
+    j2.floor = tempF;
+}
+
+void show (Job& j)
+{
+    std::cout << j.name << ": $" << j.money<<" on floor "<< j.floor <<std::endl;
+}
+*/
+
+
+
+
+
+
+
+
+
+/*
+#include <iostream>
+struct debts
+{
+    char name[50];
+    double amount;
+};
+
+template <typename T>
+void show(T arr[], int n);
+
+template <typename T>
+void show(T* arr[], int n);
+
+int main()
+{
+    int things[6] = {13, 31, 103, 301, 310, 130};
+    debts mr_E[3] = {{"Ima Wolfe", 2400.0},
+                     {"Ura Foxe", 1300.0},
+                     {"Iby Stout", 1800.0}};
+    double* pt[3];
+    for(int i = 0; i < 3; i++)
+    {
+        pt[i] = &mr_E[i].amount;
+    }
+
+    std::cout.precision(2);
+    std::cout.setf(std::ios::fixed, std::ios::floatfield);
+    std::cout << "Listing Mr.E's counts of things: "<<std::endl;
+    show(things, 6);
+    std::cout << "Listing Mr.E's debts: "<<std::endl;
+    show(pt,3);
+    return 0;
+}
+
+template <typename T>
+void show(T arr[], int n)
+{
+    std::cout << "template A" << std::endl;
+    for(int i = 0; i < n; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
+template <typename T>
+void show(T* arr[], int n)
+{
+    std::cout << "template B" << std::endl;
+    for(int i = 0 ; i < n; i++)
+    {
+        std::cout <<*arr[i] << " "; 
+    }
+    std::cout << std::endl;
+}
+*/
+
+
+
+
+
+
+
+/*
+1. 只有一行小型，非递归的代码
+2.  a. void song(char* name, int times = 1);
+    b. 没有
+    c. void song (int times, char* name = "O. My Papa");
+
+3. void iquote(int a)
+    {
+        std::cout << "\"" << a << "\"";
+    }
+
+    void iquote(double a )
+    {
+        std::cout << "\"" << a << "\"";
+    }
+
+    void iquote(string a)
+    {
+        std::cout << "\"" << a << "\"";
+    }
+
+4. a. void showStruct(box& b)
+        {
+            std::cout << "maker: " << b.maker<<std::endl;
+            std::cout << "height: " << b.height << std::endl;
+            std::cout << "width: " << b.width << std::endl;
+            std::cout << "length: "<< b.length << std::endl;
+            std::cout << "volume: "<< b.volume << std::endl;
+        }
+
+        void setVolume(box& b)
+        {
+            b.volume = b.height * b.width * b.length;
+        }
+
+5. a. 默认参数　
+　 b.函数重载
+   c.模板
+   d.模板
+
+6. template<typename T>
+    T getMax(T a, T b)
+    {
+        return a>b?a:b;
+    }
+
+
+7. template <> T getMax<T>(T a, T b)
+    {
+        return a.length * a.height*a.width > b.length * b.height * b.width?a:b;
+    }
+*/
+
+
+
+
 
 
 
