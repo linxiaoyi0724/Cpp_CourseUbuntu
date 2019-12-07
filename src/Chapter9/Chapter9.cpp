@@ -106,3 +106,66 @@ void strCount(const char* str)
     std::cout << total << " characters total" <<std::endl;
 }
 */
+
+
+
+
+
+/*
+#include <iostream>
+#include <new>
+
+const int BUF =512;
+const int N = 5;
+char buffer[BUF];
+
+int main()
+{
+    double *p1, *p2;
+    p1 = new double[N];
+    p2 = new (buffer) double[N];
+    std::cout << "Callinf new and placement new: " << std::endl;
+    std::cout << "Buffer addresses:";
+    std::cout << "    heap: " << p1 << "   static:" << (void* )buffer << std::endl;
+    for(int i = 0; i < N; i++)
+    {
+        p1[i] = p2[i] = 1000 + 20 *i;
+    }
+    std::cout << "Buffer contents:"<<std::endl;
+    for(int i = 0; i < N; i++)
+    {
+        std::cout << p1[i] << " at " << &p1[i] << "; " <<p2[i] << " at " << &p2[i] << std::endl;
+    }
+
+
+    double *p3, *p4;
+    p3 = new double[N];
+    p4 = new (buffer) double[N];
+        for(int i = 0; i < N; i++)
+    {
+        p3[i] = p4[i] = 1000 + 20 *i;
+    }
+    std::cout << "Buffer contents:"<<std::endl;
+    for(int i = 0; i < N; i++)
+    {
+        std::cout << p3[i] << " at " << &p3[i] << "; " <<p4[i] << " at " << &p4[i] << std::endl;
+    }
+
+    delete[] p1;
+    p1 = new double[N];
+    p2 = new (buffer + N * sizeof(double)) double[N];
+        for(int i = 0; i < N; i++)
+    {
+        p1[i] = p2[i] = 1000 + 20 *i;
+    }
+    std::cout << "Buffer contents:"<<std::endl;
+    for(int i = 0; i < N; i++)
+    {
+        std::cout << p1[i] << " at " << &p1[i] << "; " <<p2[i] << " at " << &p2[i] << std::endl;
+    }
+
+    delete[] p1;
+    delete[] p3;
+    return 0;
+}
+*/
