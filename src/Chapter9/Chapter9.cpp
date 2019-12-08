@@ -169,3 +169,80 @@ int main()
     return 0;
 }
 */
+
+
+
+
+/*
+1.
+    a. 自动变量
+    b. 静态全局变量
+    c. static 静态局部变量
+    d. static　在代码块内
+    
+2.  using 声明可以导入命名空间内的某一个变量;
+    using 编译指令导入命名空间内的所有变量;
+
+3.　
+    ＃include <iostream>
+    int main()
+    {
+        double x;
+        std::cout << "Enter value:";
+        while (!(std::cin >> x))
+        {
+            std::cout << "Bad input. please enter a number: ";
+            std::cin.clear();
+            while (std::cin.get()!= '\n')
+            {
+                continue;
+            }
+        }
+        std::cout << "Value = " << x  << std::endl;
+        
+    }
+
+
+4.
+    ＃include <iostream>
+    using std::cout;
+    using std::endl;
+    using std::cin;
+    int main()
+    {
+        double x;
+        cout << "Enter value:";
+        while (!(cin >> x))
+        {
+            cout << "Bad input. please enter a number: ";
+            cin.clear();
+            while (cin.get()!= '\n')
+            {
+                continue;
+            }
+        }
+        cout << "Value = " << x  << endl;
+        
+    }
+
+
+
+5.
+    可以在每个文件中包含单独的静态函数定义。　或者每个文件都在未命名的名称空间中定义一个合适的average()函数
+
+６．
+    10;
+    4;
+    ０;　// 引用不到，所有默认为０；
+    Other = 10, 1;
+    another(): 10,-4;
+
+7.
+    1;
+    4,1,2;
+    2;
+    2;
+    4,1,2;
+    2;
+
+*/
