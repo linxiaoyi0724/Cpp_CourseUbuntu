@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <cstring>
 class Stock
@@ -7,8 +8,8 @@ class Stock
         int shares;
         double share_val;
         double total_val;
-        void set_tot() {total_val = shares * share_val;}
-    
+        void set_tot(){total_val = share_val * shares;}
+
     public:
         void acquire(const char* co, int n, double pr);
         void buy(int num, double price);
@@ -17,30 +18,28 @@ class Stock
         void show();
 };
 
-
-
 void Stock::acquire(const char* co, int n, double pr)
 {
-    std::strncmp(company,co,29);
-    company[29] = '\n';
-    if(n < 0)
+    std::strncpy(company, co, 29);
+    company[29] = '\0';
+    if(n < 0 )
     {
-        std::cerr<<"Number of shares can't be negative." <<company << " shares set to 0. \n";
+        std::cerr << "Number of shares can't be negative" << company << " shares set to 0" << std::endl;
         shares = 0;
     }
     else
     {
         shares = n;
-        share_val = pr;
-        set_tot();
     }
+    share_val = pr;
+    set_tot();
 }
 
 void Stock::buy(int num, double price)
 {
     if(num < 0)
     {
-        std::cerr<<"Number of shares purchased can't be negative. Transaction is aborted. " <<std::endl; 
+        std::cerr<<"Number of shares can't be negative , Transcation is aborted." << std::endl;
     }
     else
     {
@@ -50,13 +49,15 @@ void Stock::buy(int num, double price)
     }
 }
 
-
 void Stock::sell(int num, double price)
 {
-    using std::cerr;
     if(num < 0)
     {
-        cerr<<"Number of shares purchased can't be negative. Transaction is aborted. " << std::endl;
+        std::cerr<<"Number of shares can't be negative , Transcation is aborted." << std::endl;
+    }
+    else if(num > shares)
+    {
+        std::cerr<< "You can't sell more than you have, Transcation is aborted." << std::endl;
     }
     else
     {
@@ -65,7 +66,6 @@ void Stock::sell(int num, double price)
         set_tot();
     }
 }
-
 
 void Stock::update(double price)
 {
@@ -77,8 +77,24 @@ void Stock::show()
 {
     using std::cout;
     using std::endl;
-    cout << "Company: " << company << endl;
-    cout << "Shares: " << shares << endl;
-    cout << "Share Price: "<< share_val << endl;
-    cout << "Total worth: $" << total_val << endl;
+    cout << "Company: " << company << " ,Shares: " << shares << " ,Share price: $" << share_val << endl;
+    cout << "Total price:$ " << total_val<<endl;
 }
+
+
+int main()
+{
+    using namespace std;
+    Stock stock1;
+    cout.setf(ios_base::fixed);
+    cout.precision(2);
+    cout.setf(ios_base::showpoint);
+    stock1.acquire("xiaoyi", 20, 12.5);
+    stock1.show();
+    stock1.buy(15, 18.25);
+    stock1.show();
+    stock1.sell(400,20);
+    stock1.show();
+    return 0;
+}
+*/
