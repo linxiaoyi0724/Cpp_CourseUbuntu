@@ -1,32 +1,36 @@
+/*
+#include "./stock2.h"
 #include <iostream>
-#include "stock2.h"
+using std::cout;
+using std::endl;
 
-const int STKS = 4;
+const int SKS = 4;
 int main()
 {
-    using std::cout;
-    using std::ios_base;
-
-    stock stocks[STKS] ={stock("NanoSamrt", 12, 20.0),
-                    stock("Boffo Objects", 200, 2.0),
-                    stock("Monolithic obelisks", 130, 3.25),
-                    stock("Fleep Enterprises", 60, 6.5)};
+    Stock stocks[SKS] = 
+    {
+        Stock("NanoSmart", 12, 20.00),
+        Stock("Boffo Objects", 200, 2.00),
+        Stock("Monolithic Obelisks", 130, 3.25),
+        Stock("Fleep Enterprises",60,6.50)
+    };
 
     cout.precision(2);
-    cout.setf(ios_base::fixed, ios_base::floatfield);
-    cout.setf(ios_base::showpoint);
-    cout << "stock holdings: \n";
-    for(int st = 0; st < STKS; st++)
+    cout.setf(std::ios_base::fixed, std::ios_base::floatfield);
+    cout.setf(std::ios_base::showpoint);
+
+    for(int i = 0; i < SKS; i++)
     {
-        stocks[st].show();
+        stocks[i].show();
     }
 
-    stock top = stocks[0];
-    for(int st = 1; st < STKS; st++)
+    Stock top = stocks[0];
+    for(int i = 1; i< SKS;i++)
     {
-        top = top.topVal(stocks[st]);
+        top = top.topVal(stocks[i]);
     }
-    cout << "\n Most valuable holding：\n";
+    cout << "Most valuable holding: " <<endl;
     top.show();
     return 0;
 }
+*/
