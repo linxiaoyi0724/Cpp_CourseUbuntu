@@ -32,7 +32,7 @@ bool Stack::pull(Item& item)
 {
     if(top > 0)
     {
-        item = items[top--];
+        item = items[--top];
         return true;
     }
     else

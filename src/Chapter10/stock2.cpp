@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <cstring>
 #include "stock2.h"
