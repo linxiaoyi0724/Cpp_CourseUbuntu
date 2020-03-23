@@ -1,4 +1,5 @@
 aux_source_directory(. SRC_LIST)
 aux_source_directory(./Chapter9 SRC_CHAP_LIST)
-aux_source_directory(./Chapter10 SRC_CHAP_LIST101)
-add_executable(Cpp_CourseUbuntu ${SRC_LIST} Chapter9 ${SRC_CHAP_LIST} ${SRC_CHAP_LIST101})
+aux_source_directory(./Chapter10 SRC_CHAP_LIST102)
+aux_source_directory(./Chapter11 SRC_CHAR_LIST111)
+add_executable(Cpp_CourseUbuntu ${SRC_LIST} Chapter9 ${SRC_CHAP_LIST} ${SRC_CHAP_LIST102} ${SRC_CHAR_LIST111})
