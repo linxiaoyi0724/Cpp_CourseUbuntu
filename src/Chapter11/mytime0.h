@@ -1,11 +1,11 @@
 #ifndef MYTIME_H_
 #define MYTIME_H_
-
+#include <iostream>
 namespace ME
 {
     class mytime0
     {
-    public:
+    private:
         int hours;
         int minutes;
     public:
@@ -18,9 +18,12 @@ namespace ME
         mytime0 operator+(const mytime0& t)const;
         void Show()const;
         ~mytime0();
-    };
 
-    mytime0 operator-(const mytime0& t1, const mytime0& t2);
+        friend mytime0 operator*(double m, const mytime0& t);
+        friend mytime0 operator-(const mytime0& t1, const mytime0& t2);
+        friend void operator<<(std::ostream& os, const mytime0& t);
+        
+    };
 }
 
 #endif

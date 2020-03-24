@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include "mytime0.h"
 
@@ -11,6 +12,7 @@ int main()
     ME::mytime0 fixing(5,55);
     ME::mytime0 total;
     ME::mytime0 sub;
+    ME::mytime0 mul;
 
     cout << "planning time = ";
     planning.Show();
@@ -33,6 +35,12 @@ int main()
     sub = coding - fixing;
     cout << "coding.Sub(fixing) = ";
     sub.Show();
+    cout << endl;
     
+    mul = 1.5 * coding;
+    cout << "coding.mul = ";
+    mul.Show();
+
     return 0;
 }
+*/

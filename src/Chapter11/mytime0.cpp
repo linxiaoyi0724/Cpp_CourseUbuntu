@@ -52,21 +52,32 @@ namespace ME
         return sum;
     }
 
-    mytime0 operator-(const mytime0& t1, const mytime0& t2)
-    {
-        int total1 = t1.minutes + t1.hours * 60;
-        int total2 = t2.minutes + t2.hours*60;
-        int h = (total2 - total1) /60;
-        int m = (total2 - total1) % 60;
-        mytime0 sub(h,m);
-        return sub;
-
-    }
-
     void mytime0::Show()const
     {
         std::cout << hours << " hours." << minutes << " minutes";
     }
 
-    
+    mytime0 operator*(double m,const mytime0& t)
+    {
+        mytime0 mul;
+        int min = m * t.hours * 60 + m * t.minutes;
+        mul.hours = min /60;
+        mul.minutes = min % 60;
+        return mul;
+    }
+
+    mytime0 operator-(const mytime0& t1, const mytime0& t2)
+    {
+        mytime0 sub;
+        int mint1 = t1.hours*60 + t1.minutes;
+        int mint2 = t2.hours*60 + t2.minutes;
+        sub.hours = (mint1 - mint2) / 60;
+        sub.minutes = (mint1 - mint2) % 60;
+        return sub;
+    }
+
+    void operator<<(std::ostream& os, const mytime0& t)
+    {
+        os << t.hours << " hours. " << t.minutes << " minutes";
+    }
 }
