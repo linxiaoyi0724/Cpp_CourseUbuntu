@@ -1,3 +1,4 @@
+/*
 #include "./mytime3.h"
 #include <iostream>
 int main()
@@ -15,3 +16,7 @@ int main()
     std::cout << "10 * Tosca: " << 10 * tosca << std::endl;
     return 0;
 }
+*/
+
+
+
