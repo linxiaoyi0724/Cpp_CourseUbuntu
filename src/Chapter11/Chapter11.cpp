@@ -1,3 +1,4 @@
+/*
 1.　Stonewt operator* (const double m)const;
     Stonewt Stonewt::operator*(const double m)const
     {
@@ -30,3 +31,4 @@
     {
 
     }
+*/
