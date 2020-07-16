@@ -47,7 +47,7 @@ int main()
     pc2->Show();
 
     JustTesting *pc3, *pc4;
-    pc3 = new(buffer) JustTesting("Bad Idea", 6);
+    pc3 = new(buffer + sizeof(JustTesting)) JustTesting("Bad Idea", 6);
     pc4 = new JustTesting("Heap2", 10);
 
     cout << "Memory contents "<<endl;
@@ -58,6 +58,10 @@ int main()
 
     delete pc2;
     delete pc4;
+
+    pc3->~JustTesting();
+    pc1->~JustTesting();
+
     delete[] buffer;
     cout << "Done" <<endl;
     return 0;
