@@ -1,20 +1,30 @@
+//#pragma once
 #ifndef STONEWT_H_
 #define STONEWT_H_
-
+#include <iostream>
 class Stonewt
 {
-private:
-    enum{Lbs_per_stone = 14};
-    int stone;
-    double pds_left;
-    double pounds;
+public:
+	enum 
+	{
+		per_stone = 14
+	};
+	int stone;
+	double pd_left;
+	double pound;
 
 public:
-    Stonewt();
-    ~Stonewt();
-    Stonewt(double lbs);
-    Stonewt(int stone, double lsb)
-    void show_lbs()const;
-    void show_pounds()const;
+	Stonewt();
+	Stonewt(double pd);
+	Stonewt(int st, double lbs);
+	~Stonewt();
+	void show_lbs()const;
+	void show_stn()const;
+
+	operator int()const;
+	operator double()const;
 };
-#endif
+
+
+
+#endif // !STONEWT_H_
