@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include "tabtenn1.h"
 using namespace std;
@@ -40,3 +41,7 @@ int main()
 
 	return  0;
 }
+*/
+
+
+
