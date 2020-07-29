@@ -7,7 +7,7 @@ class Brass
 private:
     enum {MAX = 35};
     char fullName[MAX];
-    long acctNum;
+    long acctNum;	
     double balance;
 public:
     Brass(const char* s = "Nullbody", long an = -1, double be = 0.0);
