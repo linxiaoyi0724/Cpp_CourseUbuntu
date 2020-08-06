@@ -49,13 +49,13 @@ std::ostream& operator<< (std::ostream& os, const baseDMA& rs)
 lacksDMA::lacksDMA(const char* c, const char* l, int r) :baseDMA(l, r)
 {
 	std::strncpy(color, c, COL_LEN);
-	color[COL_LEN] = '\0';
+	color[COL_LEN-1] = '\0';
 }
 
 lacksDMA::lacksDMA(const char* c, const baseDMA& rs) : baseDMA(rs)
 {
 	std::strncpy(color,c, COL_LEN);
-	color[COL_LEN] = '\0';
+	color[COL_LEN-1] = '\0';
 }
 
 std::ostream& operator <<(std::ostream& os, const lacksDMA& rs)
