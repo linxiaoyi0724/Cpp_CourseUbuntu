@@ -26,7 +26,7 @@ public:
 	double operator[](int i)const;
 
 	friend std::istream& operator>>(std::istream& is, Student& stu);
-	friend std::istream& getline(std::istram& is, Student& stu);
+	friend std::istream& getline(std::istream& is, Student& stu);
 	friend std::ostream& operator<< (std::ostream& os, const Student& stu);
 };
 
