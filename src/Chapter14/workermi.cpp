@@ -111,5 +111,14 @@ void SignerWaiter::Get()
 
 void SignerWaiter::Set()
 {
+    cout << "Enter singing waiter's name: ";
+    WokrerMi::Get();
+    Get();
+}
 
+void SignerWaiter::Show() const
+{
+    cout << "Category:singing waiter:" <<endl;
+    WokrerMi::Data();
+    Data();
 }

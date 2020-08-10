@@ -77,12 +77,12 @@ protected:
 
 public:
     SignerWaiter() {}
-    SignerWaiter(const std::string &s, long n, int p = 0, int v = other) : WokrerMi(s, n), WaiterMi(s, n, p), SignerMi(s, n, c) {}
+    SignerWaiter(const std::string &s, long n, int p = 0, int v = other) : WokrerMi(s, n), WaiterMi(s, n, p), SignerMi(s, n, v) {}
     SignerWaiter(const WokrerMi& wk, int p = 0, int v = other):WokrerMi(wk),WaiterMi(wk,p),SignerMi(wk,v){}
     SignerWaiter(const WaiterMi& wt,int v = other):WokrerMi(wt),WaiterMi(wt),SignerMi(wt,v){}
     SignerWaiter(const SignerMi& wt, int p = 0):WokrerMi(wt),WaiterMi(wt),SignerMi(wt,p){}
 
     void Set();
-    void Show()const;
+    void Show() const;
 };
 #endif
