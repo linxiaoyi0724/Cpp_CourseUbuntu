@@ -1,7 +1,7 @@
 #include "Worker0.h"
 #include <iostream>
 using namespace std;
-Worker::~Worker(){}
+Worker::~Worker() {}
 
 void Worker::Set()
 {
@@ -15,7 +15,7 @@ void Worker::Set()
 	}
 }
 
-void Worker::Show()const
+void Worker::Show() const
 {
 	cout << "Name:" << fullname << endl;
 	cout << "Employee ID: " << id << endl;
@@ -32,14 +32,14 @@ void Waiter::Set()
 	}
 }
 
-void Waiter::Show()const
+void Waiter::Show() const
 {
 	cout << "Category: waiter: " << endl;
 	Worker::Show();
 	cout << " Paneche rating: " << panache << endl;
 }
 
-char* Signer::pv[] = { "other","alto","contralto","soprano","bass","baritone","tenor" };
+char *Signer::pv[] = {"other", "alto", "contralto", "soprano", "bass", "baritone", "tenor"};
 
 void Signer::Set()
 {
@@ -57,15 +57,15 @@ void Signer::Set()
 		{
 			cout << endl;
 		}
-		cin >> voice;
-		while (cin.get()!='\n')
-		{
-			continue;
-		}
+	}
+	cin >> voice;
+	while (cin.get() != '\n')
+	{
+		continue;
 	}
 }
 
-void Signer::Show()const
+void Signer::Show() const
 {
 	cout << "Category: singer: " << endl;
 	Worker::Show();

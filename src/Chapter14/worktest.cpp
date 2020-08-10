@@ -1,8 +1,26 @@
-#include <iostream>
-#include "Worker0.h"
+// #include <iostream>
+// #include "Worker0.h"
 
-const int LIM = 4;
-int main()
-{
-	Waiter bob("Bob Apple", 314L, 5);
-}
+// const int LIM = 4;
+// int main()
+// {
+// 	Waiter bob("Bob Apple", 314L, 5);
+// 	Signer bev("Beverly Hills",522L,3);
+// 	Waiter w_temp;
+// 	Signer s_temp;
+
+// 	Worker* pw[LIM] = {&bob, &bev, &w_temp, &s_temp};
+
+// 	int i;
+// 	for(i= 2; i < LIM;++i)
+// 	{
+// 		pw[i]->Set();
+// 	}
+
+// 	for(int i = 0; i < LIM; ++i)
+// 	{
+// 		pw[i]->Show();
+// 		std::cout << std::endl;
+// 	}
+// 	return 0;
+// }
