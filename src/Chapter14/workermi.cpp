@@ -68,3 +68,48 @@ void SignerMi::Show()const
     WokrerMi::Data();
     Data();
 }
+
+void SignerMi::Data()const
+{
+	cout << "Vocal range: " << pv[voice] << endl;
+}
+
+void SignerMi::Get()
+{
+	cout << "Enter number for signer's local range: " << endl;
+	int i;
+	for (i = 0; i < Vtypes; ++i)
+	{
+		cout << i << ": " << pv[i] << "  ";
+		if (i % 4 == 3)
+		{
+			cout << endl;
+		}
+	}
+	if (i % 4 != 0)
+	{
+		cout << endl;
+	}
+	cin >> voice;
+	while (cin.get()!='\n')
+	{
+		continue;
+	}
+}
+
+void SignerWaiter::Data()const
+{
+	SignerMi::Data();
+	WaiterMi::Data();
+}
+
+void SignerWaiter::Get()
+{
+	WaiterMi::Get();
+	SignerMi::Get();
+}
+
+void SignerWaiter::Set()
+{
+
+}
