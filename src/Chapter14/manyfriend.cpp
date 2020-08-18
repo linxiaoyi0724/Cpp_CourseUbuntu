@@ -6,7 +6,7 @@
 //{
 //private:
 //	T item;
-//x
+//
 //public:
 //	ManyFriend(const T& i):item(i){}
 //	template<typename C, typename D> friend void Show2(C&, D&);
